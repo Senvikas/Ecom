@@ -15,11 +15,10 @@ const HeroSection = () => {
             <div className="text-center py-12 px-8 sm:px-16 max-w-screen-lg mx-auto flex flex-col gap-20">
                 {/* Tag line */}
                 <div className="flex flex-col gap-4 pt-4 px-6">
-                    <h1 className="text-6xl font-bold mb-4">Shop Winter Clearance</h1>
+                    <h1 className="text-6xl font-bold mb-4">Unwrap the World of Fragrance</h1>
 
                     <p className="text-lg text-gray-600 px-20 mb-6 ">
-                        At FragranceX.com, our mission is to provide you with the largest
-                        selection of perfumes and colognes at the lowest prices.
+                    PerfumesFor'em brings you an exquisite collection of fragrances for every mood and occasion.
                     </p>
                 </div>
                 {/* Tag line */}
