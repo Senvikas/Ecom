@@ -1,16 +1,23 @@
-import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
-import Layout from '../components/Layout';
-import Home from '../components/Home';
-import CounterPage from '../components/CounterPage';
+import React from "react";
+import { createBrowserRouter } from "react-router-dom";
+import Layout from "../components/Layout";
+import Home from "../components/Home";
+import ShopPage from "../components/ShopPage"; // New component for card-specific pages
+import PageNotFound from "../components/PageNotFound"; // Optional: handle unmatched routes
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
-      { path: '/', element: <Home /> },
-      // { path: 'counter', element: <CounterPage /> },
+      // Home page
+      { path: "/", element: <Home /> },
+
+      // Dynamic route for cards
+      { path: "shop/:type", element: <ShopPage /> },
+
+      // Optional: catch-all route for unmatched paths
+      { path: "*", element: <PageNotFound /> },
     ],
   },
 ]);
