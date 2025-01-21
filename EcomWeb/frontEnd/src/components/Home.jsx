@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from './HeroSection.jsx';
 import CardGrid from './CardGridShopByType.jsx';
 import BrandGrid from './BrandGrid.jsx';
+import BestSellers from './BestSellers.jsx';
 const Home = () => {
   return (
     <div className="text-center">
@@ -14,6 +15,8 @@ const Home = () => {
       </div>
 
       <BrandGrid /> {/* Add BrandGrid below the "Shop By Type" section */}
+
+      <BestSellers /> {/* Add BestSellers below the "Top Brands" section */}
     </div>
   );
 };
