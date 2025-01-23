@@ -40,30 +40,30 @@ const CardGrid = () => {
         {cardData.map((card) => (
           // One Cell
           <Link
-  key={card.id}
-  to={`/shop/${card.title.toLowerCase().replace(/\s+/g, "-")}`} // Dynamic link
->
-  <div
-    className="p-6 flex flex-col justify-center items-center dark:bg-gray-800 shadow-md rounded-lg border dark:border-gray-700 hover:shadow-lg transition duration-300 h-[40vh]"
-  >
-    {/* Icon */}
-    <div className="mb-4">
-      {React.cloneElement(card.icon, {
-        className: "text-[8vw] text-blue-500 dark:text-yellow-300",
-      })}
-    </div>
+            key={card.id}
+            to={`/shop/${card.title.toLowerCase().replace(/\s+/g, "-")}`} // Dynamic link
+          >
+            <div
+              className="p-6 flex flex-col justify-center items-center dark:bg-gray-800 shadow-md rounded-lg border dark:border-gray-700 hover:shadow-lg transition duration-300 h-[40vh]"
+            >
+              {/* Icon */}
+              <div className="mb-4">
+                {React.cloneElement(card.icon, {
+                  className: "text-[8vw] text-blue-500 dark:text-yellow-300",
+                })}
+              </div>
 
-    {/* Title */}
-    <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-2 text-center hover:underline hover:text-blue-500 dark:hover:text-yellow-400 underline">
-      {card.title}
-    </h3>
+              {/* Title */}
+              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-2 text-center hover:underline hover:text-blue-500 dark:hover:text-yellow-400 underline">
+                {card.title}
+              </h3>
 
-    {/* Description */}
-    <p className="text-m text-gray-600 dark:text-gray-300 text-center">
-      {card.description}
-    </p>
-  </div>
-</Link>
+              {/* Description */}
+              <p className="text-m text-gray-600 dark:text-gray-300 text-center">
+                {card.description}
+              </p>
+            </div>
+          </Link>
 
         ))}
       </div>

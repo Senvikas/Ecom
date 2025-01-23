@@ -30,7 +30,7 @@ const brandData = [
         image: Versace,
         productCount: 29,
     },
-    
+
 ];
 
 const BrandGrid = () => {
@@ -63,14 +63,17 @@ const BrandGrid = () => {
                         />
 
                         {/* Brand Name - Clickable but No Underline */}
-                        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                        {/* Brand Name - Clickable but No Underline */}
+                        <h3 className="text-lg font-bold text-black dark:text-gray-100 mb-2">
                             <a
                                 href={`/brand/${brand.name.toLowerCase().replace(/\s+/g, "-")}`}
                                 className="hover:text-blue-500 dark:hover:text-yellow-400 transition"
+                                style={{ textDecoration: "none" }} // Explicitly remove underline if applied by default
                             >
                                 {brand.name}
                             </a>
                         </h3>
+
 
                         {/* Product Count - Clickable and Underlined */}
                         <p className="text-sm text-gray-600 dark:text-gray-300">
